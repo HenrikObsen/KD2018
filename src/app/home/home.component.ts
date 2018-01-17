@@ -29,8 +29,8 @@ rotator() {
 
 
   $("#slider").fadeTo(700, 0, function () {
-      $("#slider").attr("alt", imgString);
-      $("#slider").attr("src", imgString);
+      $("#wrSlider").attr("style", "background-image: url('" + imgString + "')");
+  
       $("#slider").fadeTo(700, 1, function () {
 
       });

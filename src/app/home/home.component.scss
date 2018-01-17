@@ -1,14 +1,18 @@
 @import '../Schared.scss';
 
 #slider{
+    margin-top:20px;
     width:100%; 
 }
 
 #wrSlider{
-    margin-top:20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../../assets/SliderImg/3.jpg');
     width:100%;
     display: none;
-    
+    height: 500px;    
 }
 
 

@@ -10,37 +10,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script> 
         $(document).ready(function(){
-            $("#toggleMenu").click(function(){
-                $("#menu-panel").slideToggle("slow");
-                $('html,body').animate({ scrollTop: $("body").offset().top }, 'slow');
-;
-            });
-
-            $(".mobileMenuItem").click(function(){
-                $("#menu-panel").slideUp("slow");
-            });
-
-            $("#navBestilling").click(function(){               
-                $("#menuBestilling").slideToggle("slow");
-                $("#menuKontakt").slideUp("slow");
-;
-            });
-
-            $(".bestillingMenuItem").click(function(){
-                $("#menuBestilling").slideUp("slow");
-            });
-
-            $("#navContact").click(function(){           
-               
-                $("#menuKontakt").slideToggle("slow");
-                $("#menuBestilling").slideUp("slow");
-
-;
-            });
-
-            $(".kontaktMenuItem").click(function(){
-                $("#menuKontakt").slideUp("slow");
-            });
+                  
+           
         });
         </script>
 </head>

@@ -1,7 +1,7 @@
 @import 'Schared.scss';
 
 
-  
+
   .navbar {
     margin: 0;
     height: 42px;
@@ -10,21 +10,26 @@
     top: 0;
     width: 100%;
     z-index: 400;
+
+    
+  #flag {
+    height: 30px;
   }
-  
-  .navbar .menu {
+
+  .menu {
     float: right;
     width: 45%;
   }
   
-  .navbar .brand {
-    width: 52px;
+  .brand {
+    margin-top: 7px;
+    width: 50px;
     float: left;
     
   }
   
-  .navbar .brand-text {
-      font-family: 'Cooper Black';
+ .brand-text {
+    font-family: 'Cooper Black';
     padding: 15px 0 0 0;
     line-height: 0.8;
     width: 65%;
@@ -38,28 +43,14 @@
     }
   }
   
-  .navbar .brand-text span {
+  .brand-text span {
     font-size: 10px;
   }
-  
-  #desktopMenu {
-    float: right;
-    display: none;
-    list-style-type: none;
-    margin: 0 10px 0 0;
-    padding: 4px 0 0 0;
   }
   
-  #desktopMenu li {
-    float: right;
-  }
   
-  #desktopMenu li a {
-    display: block;
-    padding: 8px;
-    color: white;
-    text-decoration: none;
-  }
+  
+  
   
   #footer {
     margin: 0;    
@@ -90,34 +81,7 @@
   
   
   
-  #menuBestilling, #menuKontakt {
-    position: fixed;
-    z-index: 399;
-    bottom: 20px;
-    display: none;
-    background-color: #f5f4f4;
-    width: 100%;
-    padding: 10px 0px 20px 0px;
-  }
   
-  #menuBestilling ul, #menuKontakt ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  #menuBestilling li, #menuKontakt li {
-    border-bottom: 1px solid #e4e3e3;
-    cursor: pointer;
-    padding: 7px;
-  }
-  
-  #menuBestilling li a, #menuKontakt li a {
-    display: block;
-    padding: 0px;
-    color: #808080;
-    text-decoration: none;
-  }
   
   #toggleMenu {
     position: absolute;
@@ -130,31 +94,35 @@
     cursor: pointer;
   }
   
-  #menu-panel {
-    position: relative;
+  #desktopMenu {
+    margin:0;
+    position: fixed;
+    top: 42px;
+    left:0;
+    right:0;
     z-index: 300;
     display: none;
     background-color: #f5f4f4;
     width: 100%;
     padding: 30px 0px 20px 0px;
-  }
-  
-  #menu-panel #mobileMenu {
     list-style-type: none;
     padding: 0;
+    
+    
+    li {
+      border-bottom: 1px solid #e4e3e3;
+      cursor: pointer;
+    }
+    
+    li a {
+      display: block;
+      padding: 8px;
+      color: #808080;
+      text-decoration: none;
+    }
   }
   
-  #menu-panel #mobileMenu li {
-    border-bottom: 1px solid #e4e3e3;
-    cursor: pointer;
-  }
-  
-  #menu-panel #mobileMenu li a {
-    display: block;
-    padding: 8px;
-    color: #808080;
-    text-decoration: none;
-  }
+ 
   
   #content {
     position: absolute;
@@ -174,10 +142,46 @@
     #toggleMenu {
       display: none;
     }
-    #desktopMenu {
-      display: block;
-    }
+    
     .navbar .brand-text {
       width: 40%;
     }
+
+    #desktopMenu {
+      position: relative;
+      top:0;
+      background: none;
+      float: right;
+      display: block !important;
+      list-style-type: none;
+      margin: 0 10px 0 0;
+      padding: 4px 0 0 0;
+        li {
+          float: right;
+          border: none;
+          a {
+            display: block;
+            padding:10px 8px;
+            color: white;
+            text-decoration: none;
+          }
+      }
+    } 
+
+    .submenu{
+  
+      position: fixed;
+      top: 42px;
+      left: 0;
+      right: 0;
+      text-align: center;
+     background-color: $backGray;
+     
+      li{
+        float: none !important;
+        display: inline-block;
+        padding: 5px;
+      }
+    }
+      
   }
