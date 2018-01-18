@@ -5,9 +5,11 @@
 </div>
 
  
-<div class="wrContent">
+<section class="wrContent">
 <h1>Kattegat Dykkerne, Grenaa</h1>
-<p class="textCol">
+
+<article id="colWR">
+  <p class="textCol">
 Kattegat Dykkerne ligger som en vanddråbe ude på Jyllands næsetip, Djursland. Klubbens hjemsted er 
 Grenaa Marina, en lille ø beregnet for fritidssejlere samt andet godtfolk med hang til det maritime liv.
 
@@ -19,8 +21,21 @@ For dem af familien der ikke vil dykke, er der legeplads på området. 100 meter
 
 Et stenkast til Kattegat Centret, og skulle det ikke være tilstrækkelige udfoldelser, er der kun 3 km. til 
 centrum af Grenaa by, med alt hvad dette indebærer.</p>
-</div>
+</article>
+<img src="../assets/Logo2.png" alt="KD logo" id="logo2" />
+
+</section>
 
 <div class="wrGray">
-  <div class="wrContent">test</div>
+  <div class="wrContent per">
+    <app-p-box class="pBoxWR" *ngFor="let pBox of pData" [pBox]="pBox"></app-p-box>
+  </div>
+</div>
+
+<section class="wrContent">test</section>
+
+<div class="wrGray">
+  <div class="wrContent per">
+    <app-p-box class="pBoxWR" *ngFor="let pBox of pData" [pBox]="pBox"></app-p-box>
+  </div>
 </div>

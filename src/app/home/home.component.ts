@@ -1,17 +1,38 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 declare var jquery:any;
 declare var $ :any;
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss']
+  styleUrls: ['./home.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 
 
 export class HomeComponent implements OnInit {
 
- 
+  pData = [
+    {
+      image: "Dykkertur.jpg",
+      headline: "Dykkerture",
+      content: "Letraset-ark, som indeholdt afsnit med  Lorem Ipsum, og senere med layoutprogrammer som"
+    },
+    {
+      image: "Uddannelse.jpg",
+      headline: "Dykkerture",
+      content: "Letraset-ark, som indeholdt afsnit med  Lorem Ipsum, og senere med layoutprogrammer som"
+    },  {
+      image: "rejser.jpg",
+      headline: "Dykkerture",
+      content: "Letraset-ark, som indeholdt afsnit med  Lorem Ipsum, og senere med layoutprogrammer som"
+    },  {
+      image: "uv-jagt.jpg",
+      headline: "Dykkerture",
+      content: "Letraset-ark, som indeholdt afsnit med  Lorem Ipsum, og senere med layoutprogrammer som"
+    },
+  ]; 
+  
 pause = 4000; //Pause inden nyt billede vises. Angives i millisekunder. 
 img;
 imgID = 0;
@@ -51,7 +72,7 @@ loadImages(images) {
 
 
    constructor(){
-     this.loadImages('1.jpg,2.jpg,3.jpg');
+     this.loadImages('5.jpg,6.jpg,7.jpg,8.jpg,9.jpg');
    }       
 
    ngOnInit(){

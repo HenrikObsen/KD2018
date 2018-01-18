@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { KontaktComponent } from './kontakt/kontakt.component';
 import { HomeComponent } from './home/home.component';
+import { PBoxComponent } from './p-box/p-box.component';
+import { IBoxComponent } from './i-box/i-box.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     KontaktComponent,
-    HomeComponent
+    HomeComponent,
+    PBoxComponent,
+    IBoxComponent
   ],
   imports: [
     BrowserModule,

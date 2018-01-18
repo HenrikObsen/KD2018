@@ -1,13 +1,16 @@
 $mainBlue: #69809c; 
 $backGray: #ebeced;
 $headerColor: #61778c;
-
+img{
+width:100%;
+}
 h1 {
     color:$headerColor;
   }
   
   h2 {
-    color: #5e5d5d;
+    color: $headerColor;
+    font-size: 14px;
   }
   
 
@@ -18,7 +21,11 @@ h1 {
     width:92%;
     position: relative;
 
-  
+    &:after,&:before {
+        content: " ";
+        clear: both;
+        display: table;
+    }  
 
   }
 

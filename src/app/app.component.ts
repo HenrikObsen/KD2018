@@ -48,20 +48,20 @@ export class AppComponent {
         }
       }
     });
-    
-    if ($(window).width() < "992")
-  {
-    $("#desktopMenu ul li").on('click',function(){
-      $("#desktopMenu").slideUp();
-       
-     });   
-     $("#desktopMenu>li").on('click',function (){
-         if($(this).hasClass('parent') != true){
-           $("#desktopMenu").slideUp();
-         }
-     })
-  }
 
+    if ($(window).width() < "992")
+    {
+      $("#desktopMenu ul li").on('click',function(){
+        $("#desktopMenu").slideUp();
+          
+        });   
+        $("#desktopMenu>li").on('click',function (){
+            if($(this).hasClass('parent') != true){
+              $("#desktopMenu").slideUp();
+            }
+        })
+    }
+  
     $("#toggleMenu").click(function(){
       $("#desktopMenu").slideToggle("slow");
   //    $('html,body').animate({ scrollTop: $("body").offset().top }, 'slow');
