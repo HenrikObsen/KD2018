@@ -12,13 +12,13 @@
   <p class="textCol">
 Kattegat Dykkerne ligger som en vanddråbe ude på Jyllands næsetip, Djursland. Klubbens hjemsted er 
 Grenaa Marina, en lille ø beregnet for fritidssejlere samt andet godtfolk med hang til det maritime liv.
-
+<br/><br/>
 På øen findes alle de fornødenheder sejlere og dykkere gør brug af for at få et vellykket ophold på et 
 sådant sted, her kan bl.a. nævnes: Havnekontor, Spise restauranter, Offentlige toiletter med brusere,
 luftpåfyldning, Nedkørselsramper til fartøjer og meget meget mere. 
-
+<br/><br/>
 For dem af familien der ikke vil dykke, er der legeplads på området. 100 meter til en meget fin sandstrand. 
-
+<br/><br/>
 Et stenkast til Kattegat Centret, og skulle det ikke være tilstrækkelige udfoldelser, er der kun 3 km. til 
 centrum af Grenaa by, med alt hvad dette indebærer.</p>
 </article>
@@ -26,16 +26,23 @@ centrum af Grenaa by, med alt hvad dette indebærer.</p>
 
 </section>
 
-<div class="wrGray">
-  <div class="wrContent per">
-    <app-p-box class="pBoxWR" *ngFor="let pBox of pData" [pBox]="pBox"></app-p-box>
-  </div>
-</div>
-
-<section class="wrContent">test</section>
+<div class="plImg1"></div>
 
 <div class="wrGray">
   <div class="wrContent per">
-    <app-p-box class="pBoxWR" *ngFor="let pBox of pData" [pBox]="pBox"></app-p-box>
+    <app-p-box class="pBoxWR" *ngFor="let pBox of p1Data" [pBox]="pBox"></app-p-box>
   </div>
 </div>
+
+
+
+<section class="wrContent"><app-i-box class="iBoxWR" *ngFor="let iBox of i1Data" [iBox]="iBox"></app-i-box></section>
+
+<div class="plImg1"></div>
+
+<div class="wrGray">
+  <div class="wrContent per">
+    <app-p-box class="pBoxWR" *ngFor="let pBox of p2Data" [pBox]="pBox"></app-p-box>
+  </div>
+</div>
+

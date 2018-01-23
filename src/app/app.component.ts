@@ -26,11 +26,11 @@ export class AppComponent {
           var $submenu = $(".submenu");
         
           if($thisSubmenu.hasClass('open')){
-            $submenu.slideUp();
+            $submenu.stop().slideUp();
             $submenu.removeClass('open');
           }else{
-            $submenu.slideUp();          
-            $thisSubmenu.slideDown();
+            $submenu.stop().slideUp();          
+            $thisSubmenu.stop().slideDown();
             $thisSubmenu.addClass('open');
           }
         }
@@ -38,13 +38,13 @@ export class AppComponent {
       mouseenter : function(){
         if ($(window).width() > "992")
         {  
-          $(this).find(".submenu").slideDown();
+          $(this).find(".submenu").stop().slideDown();
         }
       },
       mouseleave : function(){
         if ($(window).width() > "992") 
         {  
-          $(".submenu").slideUp();      
+          $(".submenu").stop().slideUp();      
         }
       }
     });
@@ -63,7 +63,8 @@ export class AppComponent {
     }
   
     $("#toggleMenu").click(function(){
-      $("#desktopMenu").slideToggle("slow");
+      $("#desktopMenu").stop().slideToggle("slow");
+      $(".submenu").stop().slideUp();     
   //    $('html,body').animate({ scrollTop: $("body").offset().top }, 'slow');
     });
   }

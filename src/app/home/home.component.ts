@@ -12,7 +12,28 @@ declare var $ :any;
 
 export class HomeComponent implements OnInit {
 
-  pData = [
+  p1Data = [
+    {
+      image: "Dykkertur.jpg",
+      headline: "Dykkerture",
+      content: "Letraset-ark, som indeholdt afsnit med  Lorem Ipsum, og senere med layoutprogrammer som"
+    },
+    {
+      image: "Uddannelse.jpg",
+      headline: "Dykkerture",
+      content: "Letraset-ark, som indeholdt afsnit med  Lorem Ipsum, og senere med layoutprogrammer som"
+    },  {
+      image: "rejser.jpg",
+      headline: "Dykkerture",
+      content: "Letraset-ark, som indeholdt afsnit med  Lorem Ipsum, og senere med layoutprogrammer som"
+    },  {
+      image: "uv-jagt.jpg",
+      headline: "Dykkerture",
+      content: "Letraset-ark, som indeholdt afsnit med  Lorem Ipsum, og senere med layoutprogrammer som"
+    },
+  ]; 
+
+  p2Data = [
     {
       image: "Dykkertur.jpg",
       headline: "Dykkerture",
@@ -33,6 +54,22 @@ export class HomeComponent implements OnInit {
     },
   ]; 
   
+  i1Data = [
+    {
+      icon: "fa-facebook",
+      headline: "Tilmelding",
+      content: "LDuis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait."
+    },
+    {
+      icon: "fa-star",
+      headline: "Svømmehal",
+      content: "LDuis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait."
+    }, {
+      icon: "fa-address-book",
+      headline: "Kontakt",
+      content: "LDuis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait."
+    }
+  ]; 
 pause = 4000; //Pause inden nyt billede vises. Angives i millisekunder. 
 img;
 imgID = 0;

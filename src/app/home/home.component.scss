@@ -1,7 +1,7 @@
 @import '../Schared.scss';
 
 #slider{
-    margin-top:40px;
+    margin:40px 0 40px 0;
     width:100%; 
     min-height: 1px;
    
@@ -27,22 +27,60 @@
     display: none;
   }
 
+
   .textCol{
    
-        -webkit-column-count: 2; /* Chrome, Safari, Opera */
-        -moz-column-count: 2; /* Firefox */
-        column-count: 2;
+        -webkit-column-count: 1; /* Chrome, Safari, Opera */
+        -moz-column-count: 1; /* Firefox */
+        column-count: 1;
         -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
         -moz-column-gap: 40px; /* Firefox */
         column-gap: 40px;
    
   }
   
-  //***************************** pBox *****************************************
+  //***************************** parelax *****************************************
+
+  .plImg1 {
+    background: url('../../assets/Backgrunds/back01.jpg') no-repeat fixed center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: white;
+    padding: 150px 0;
+}
+
+
+
+
+//***************************** pBox *****************************************
 
 
 .pBoxWR{
-    width: calc(25% - 23px);
+    width: 100%;
+    float:left;    
+    margin: 30px 30px 30px 0 ;
+    background-color:white;
+    text-align: center;
+    &:last-of-type{
+        margin-right: 0;
+      
+      }
+      
+    p{
+        font-size: 12px;
+        padding:10px;
+    }   
+}
+
+//***************************** iBox *****************************************
+
+
+.iBoxWR{
+    display: table;
+    width: 100%;
+    height: 100%;
     float:left;    
     margin: 30px 30px 30px 0 ;
     background-color:white;
@@ -52,13 +90,26 @@
       
       }
 
-      
-    p{
-        font-size: 12px;
+    .iconBox{
+        display: table-cell;    
+        width: 50px;
+        height: 100%;
+        background: linear-gradient($mainBlue, #bac3ca);
+        color:white;
+        font-size: 28px;
+        padding-top: 10px;
+    }
+    .content{
         padding:10px;
+        text-align: left;
+        display: table-cell;
+        width: calc(100%-50px);
+        background-color: $backGray;
+    }
+    p{
+        font-size: 12px;        
     }   
 }
-
    
 
   //***************************** Forside tekst + logo *****************************
@@ -84,7 +135,69 @@
 
 
     @media only screen and (min-width: 768px) {
+        .pBoxWR{
+            width: calc(50% - 30px);
+            float:left;    
+            margin: 50px 30px 50px 0 ;
+            background-color:white;
+            text-align: center;
+            &:last-of-type{
+                margin-right: 0;
+              
+              }
+              
+            p{
+                font-size: 12px;
+                padding:10px;
+            }   
+        }
 
+        .iBoxWR{
+            border: solid 1px red;
+            display: table;
+            width: calc(33% - 17px);
+            height: 100%;
+            float:left;    
+            margin: 100px 30px 100px 0 ;
+            background-color:white;
+            text-align: center;
+            &:last-of-type{
+                margin-right: 0;
+              
+              }
+        
+            .iconBox{
+                display: table-cell;    
+                width: 50px;
+                height: 100%;
+                background: linear-gradient($mainBlue, #bac3ca);
+                color:white;
+                font-size: 28px;
+                padding-top: 10px;
+            }
+            .content{
+                padding:10px;
+                text-align: left;
+                display: table-cell;
+                width: calc(100%-50px);
+                background-color: $backGray;
+            }
+            p{
+                font-size: 12px;        
+            }   
+        }
+
+        .textCol{
+   
+            -webkit-column-count: 2; /* Chrome, Safari, Opera */
+            -moz-column-count: 2; /* Firefox */
+            column-count: 2;
+            -webkit-column-gap: 40px; /* Chrome, Safari, Opera */
+            -moz-column-gap: 40px; /* Firefox */
+            column-gap: 40px;
+       
+      }
+       
         #logo {           
             top: 100px;     
             display: block;        
@@ -96,15 +209,13 @@
          }
         
          #colWR{
-            width:75%;
+            width:100%;
             float: left;
             }
         
          #logo2{
-            width:20%;
-            float: right;
-            margin:10px;
-            display:block;
+    
+            display:none;
          }
        
     }
@@ -121,9 +232,53 @@
 
     @media only screen and (min-width: 992px) {
 
-        #logo {           
-            top: 130px;             
-          }
+        .iBoxWR{
+            border: solid 1px red;
+            display: table;
+            width: calc(33% - 17px);
+            height: 100%;
+            float:left;    
+            margin: 100px 30px 100px 0 ;
+            background-color:white;
+            text-align: center;
+            &:last-of-type{
+                margin-right: 0;
+              
+              }
+        
+            .iconBox{
+                display: table-cell;    
+                width: 50px;
+                height: 100%;
+                background: linear-gradient($mainBlue, #bac3ca);
+                color:white;
+                font-size: 28px;
+                padding-top: 10px;
+            }
+            .content{
+                padding:10px;
+                text-align: left;
+                display: table-cell;
+                width: calc(100%-50px);
+                background-color: $backGray;
+            }
+            p{
+                font-size: 12px;        
+            }   
+        }
+
+        #colWR{
+            width:75%;
+            float: left;
+            }
+
+        #logo2{
+            width:20%;
+            float: right;
+            margin:10px 10px 60px 10px;
+            display:block;
+         }
+       
           #wrSlider{
             display: block;   
             height: 400px;           
@@ -139,9 +294,53 @@
 
 @media only screen and (min-width: 1200px) {
 
-      #logo {           
-        top: 130px;             
-      }
+    .iBoxWR{
+        border: solid 1px red;
+        display: table;
+        width: calc(33% - 17px);
+        height: 100%;
+        float:left;    
+        margin: 100px 30px 100px 0 ;
+        background-color:white;
+        text-align: center;
+        &:last-of-type{
+            margin-right: 0;
+          
+          }
+    
+        .iconBox{
+            display: table-cell;    
+            width: 50px;
+            height: 100%;
+            background: linear-gradient($mainBlue, #bac3ca);
+            color:white;
+            font-size: 28px;
+            padding-top: 10px;
+        }
+        .content{
+            padding:10px;
+            text-align: left;
+            display: table-cell;
+            width: calc(100%-50px);
+            background-color: $backGray;
+        }
+        p{
+            font-size: 12px;        
+        }   
+    }
+
+    .pBoxWR{
+        width: calc(25% - 23px);
+        
+        margin: 100px 30px 100px 0 ;
+        
+        
+        p{
+            font-size: 12px;
+            padding:10px;
+        }   
+    }
+
       #wrSlider{
         display: block;      
         height: 450px;        
@@ -149,10 +348,18 @@
 
 @media only screen and (min-width: 1550px) {
 
-       
-        #logo {           
-            top: 200px;             
-          }
+    .pBoxWR{
+        width: calc(25% - 23px);
+        
+        margin: 100px 30px 100px 0 ;
+        
+        
+        p{
+            font-size: 12px;
+            padding:10px;
+        }   
+    }
+     
           #wrSlider{
             display: block;      
             height: 500px;       
