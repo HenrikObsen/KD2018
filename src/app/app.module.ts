@@ -7,6 +7,7 @@ import { KontaktComponent } from './kontakt/kontakt.component';
 import { HomeComponent } from './home/home.component';
 import { PBoxComponent } from './p-box/p-box.component';
 import { IBoxComponent } from './i-box/i-box.component';
+import { OmOsComponent } from './om-os/om-os.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { IBoxComponent } from './i-box/i-box.component';
     KontaktComponent,
     HomeComponent,
     PBoxComponent,
-    IBoxComponent
+    IBoxComponent,
+    OmOsComponent
   ],
   imports: [
     BrowserModule,

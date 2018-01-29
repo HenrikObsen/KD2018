@@ -1,86 +1,54 @@
 @import 'Schared.scss';
 
-
-
   .navbar {
-    margin: 0;
-    height: 42px;
-    background-color: $mainBlue;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 400;
+      margin: 0;
+      height: 42px;
+      background-color: $mainBlue;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 400;
 
     
-  #flag {
-    width: 40px;
-  }
+      #flag {
+          width: 40px;
+      }
 
-  .menu {
-    float: right;
-    width: 45%;
-  }
-  
-  .brand {
-    margin-top: 7px;
-    width: 50px;
-    float: left;
-    
-  }
-  
- .brand-text {
-    font-family: 'Cooper Black';
-    padding: 15px 0 0 0;
-    line-height: 0.8;
-    width: 65%;
-    color: white;
-    text-align: left;
-    float: left;
-    a{
-        color:white;
-        text-decoration: none;
-        font-size:16px;
-    }
-  }
-  
-  .brand-text span {
-    font-size: 10px;
-  }
-  }
-  
-  
-  
-  
-  
-  #footer {
-    margin: 0;    
-    background-color:$mainBlue;
-    width: 100%;    
-    text-align: center;
-    color: white; 
-    font-size:12px;
-    //position: fixed;
-    //bottom: 0;
-    //z-index: 400;
-    padding:10px 0 10px 0;
+      .menu {
+          float: right;
+          width: 45%;
+      }
+      
+      .brand {
+          margin-top: 7px;
+          width: 50px;
+          float: left;
+        
+      }
+      
+      .brand-text {
+          font-family: 'Cooper Black';
+          padding: 15px 0 0 0;
+          line-height: 0.8;
+          width: 65%;
+          color: white;
+          text-align: left;
+          float: left;
+          a{
+              color:white;
+              text-decoration: none;
+              font-size:16px;
+          }
 
-    #left {
-    float: left;
-    width: 50%;
-    text-align: left;
-   
-    
+          @include respond-to(medium) { 
+            width: 40%;
+          }
+      }
+  
+      .brand-text span {
+          font-size: 10px;
+      }
   }
-  
-  #right {
-    float: left;
-    width: 50%;
-    text-align: right;
-  }
-  }
-  
-  
-  
   
   
   #toggleMenu {
@@ -92,6 +60,10 @@
     color: white;
     font-size: 25px;
     cursor: pointer;
+
+    @include respond-to(medium) { 
+      display: none;
+    }
   }
   
   #desktopMenu {
@@ -120,34 +92,8 @@
       color: #808080;
       text-decoration: none;
     }
-  }
-  
- 
-  
-  #content {
-    position: absolute;
-    margin: 35px 0px 0px 0px;
-    z-index: 100;
-  }
 
-
-  
-  /*  TABLET PORTRÆT - 768px og op
-  
-      --------------------------------------- */
-  /*  TABLET LANDSKAB OG LILE DESKTOP - 992px og op
-          
-              --------------------------------------- */
-  @media only screen and (min-width: 992px) {
-    #toggleMenu {
-      display: none;
-    }
-    
-    .navbar .brand-text {
-      width: 40%;
-    }
-
-    #desktopMenu {
+    @include respond-to(medium) { 
       position: relative;
       top:0;
       background: none;
@@ -168,23 +114,62 @@
             color: white;
             text-decoration: none;
           }
-      }
-    } 
+        }
 
-    .submenu{
-  
-      position: fixed;
-      top: 42px;
-      left: 0;
-      right: 0;
-      text-align: center;
-     background-color: $backGray;
-     
-      li{
-        float: none !important;
-        display: inline-block;
-        padding: 15px;
+        .submenu{
+          
+              position: fixed;
+              top: 42px;
+              left: 0;
+              right: 0;
+              text-align: center;
+             background-color: $backGray;
+             
+              li{
+                float: none !important;
+                display: inline-block;
+                padding: 15px;
+
+                a{
+                  color:black;
+                }
+
+              }
+            }
       }
-    }
-      
+  } 
+ 
+  
+  #content {
+    position: absolute;
+    margin: 35px 0px 0px 0px;
+    z-index: 100;
   }
+
+
+  
+  #footer {
+    margin: 0;    
+    background-color:$mainBlue;
+    width: 100%;    
+    text-align: center;
+    color: white; 
+    font-size:12px;
+    padding:10px 0 10px 0;
+
+    #left {
+      float: left;
+      width: 50%;
+      text-align: left; 
+    }
+  
+    #right {
+      float: left;
+      width: 50%;
+      text-align: right;
+    }
+  }
+  
+  
+  
+  
