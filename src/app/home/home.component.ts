@@ -14,60 +14,60 @@ export class HomeComponent implements OnInit {
 
   p1Data = [
     {
-      image: "Dykkertur.jpg",
-      headline: "Dykkerture",
-      content: "Letraset-ark, som indeholdt afsnit med  Lorem Ipsum, og senere med layoutprogrammer som"
+      image: "Klubhus.jpg",
+      headline: "Klubhuset",
+      content: "Vores klubhus er placeret på Grenaa Marina helt ned til vandet, den perfekte placering."
     },
     {
-      image: "Uddannelse.jpg",
-      headline: "Dykkerture",
-      content: "Letraset-ark, som indeholdt afsnit med  Lorem Ipsum, og senere med layoutprogrammer som"
+      image: "Stranddyk.jpg",
+      headline: "Stranddyk",
+      content: "I sommerperioden er der ugentlige stranddyk ved de omkringliggende kyster. Til dette bor vi jo perfekt"
     },  {
-      image: "rejser.jpg",
-      headline: "Dykkerture",
-      content: "Letraset-ark, som indeholdt afsnit med  Lorem Ipsum, og senere med layoutprogrammer som"
+      image: "Baadtur.jpg",
+      headline: "Bådture",
+      content: "Klubben råder over en lille rib-båd og flere af klubbens medlemmer afholder ture i deres private både."
     },  {
       image: "uv-jagt.jpg",
-      headline: "Dykkerture",
-      content: "Letraset-ark, som indeholdt afsnit med  Lorem Ipsum, og senere med layoutprogrammer som"
+      headline: "UV-jagt",
+      content: "Vi har også en del fridykkere og uv-jægere i klubben der jævntlig deltager i forskellige konkurencer."
     },
   ]; 
 
   p2Data = [
     {
-      image: "Dykkertur.jpg",
-      headline: "Dykkerture",
-      content: "Letraset-ark, som indeholdt afsnit med  Lorem Ipsum, og senere med layoutprogrammer som"
+      image: "Uddannelse1.jpg",
+      headline: "Uddannelse",
+      content: "Klubben har tilknytter instruktøre og vi uddanner dykkere inden for Padi og TDI"
     },
     {
-      image: "Uddannelse.jpg",
-      headline: "Dykkerture",
-      content: "Letraset-ark, som indeholdt afsnit med  Lorem Ipsum, og senere med layoutprogrammer som"
-    },  {
       image: "rejser.jpg",
-      headline: "Dykkerture",
-      content: "Letraset-ark, som indeholdt afsnit med  Lorem Ipsum, og senere med layoutprogrammer som"
+      headline: "Udenlandsture",
+      content: "Vi afholder eller deltager årligt i udenlands ture blandt andet til Norge"
     },  {
-      image: "uv-jagt.jpg",
-      headline: "Dykkerture",
-      content: "Letraset-ark, som indeholdt afsnit med  Lorem Ipsum, og senere med layoutprogrammer som"
+      image: "Foto.jpg",
+      headline: "Foto",
+      content: "I klubbens medlemmer deltager jævnligt i foto konkurencer og arangamanger"
+    },  {
+      image: "Svommehal.jpg",
+      headline: "Svømmehal",
+      content: "Klubben har på bestemte tidspunkter fået tildelt haltider i Grenaa Idræts Centers svømmehal."
     },
   ]; 
   
   i1Data = [
     {
-      icon: "fa-facebook",
+      icon: "fa-star",
       headline: "Tilmelding",
-      content: "LDuis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait."
+      content: "Hvis du tror at Kattegat Dykkerne kunne være en klub for dig. Er du velkommen til at se forbi klubben en tirsdag til klubaften eller tilmelde dig online via linket her under. Hvis du skulle have nogle spærgsmål kan du kontae os via mail eller telefon, de boksen Kontakt.<br/><br/><a>Tilmelding klik her</a>"
     },
     {
-      icon: "fa-star",
-      headline: "Svømmehal",
-      content: "LDuis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait."
+      icon: "fa-facebook",
+      headline: "Facebook",
+      content: "Det meste af vores komunikation forgår via vores to facebook grupper. Den ene grupper er for alle og er typisk der vi skly aktiviteter op. Den anden er lukket og kun til intern brug for klubbens medlemmer. <br><br>du finder vores facebook gruppe ved at klikke <a href='https://www.facebook.com/groups/kattegatdykkerne/' target='_blank'>her</a>"
     }, {
       icon: "fa-address-book",
       headline: "Kontakt",
-      content: "LDuis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait."
+      content: "Kattagat Dykkerne Grenaa<br>att: Kristoffer Sørensen<br> Skakkesholm 20<br>DK-8500 Grenaa<br><br>formanden@kattagatdykkerne.dk<br>Tlf: 21702540"
     }
   ]; 
 pause = 4000; //Pause inden nyt billede vises. Angives i millisekunder. 

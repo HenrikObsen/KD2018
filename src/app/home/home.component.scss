@@ -1,5 +1,6 @@
 @import '../Schared.scss';
 
+
 #slider{
     margin:40px 0 40px 0;
     width:100%; 
@@ -25,11 +26,29 @@
     top: 80px;
     z-index: 400;
     display: none;
+
+
   }
 
 
   .textCol{
    
+    @include respond-to(small) { 
+        color: red;
+     }
+
+     @include respond-to(medium) { 
+        color: blue;
+     }
+
+     @include respond-to(large) { 
+        color: green;
+     }
+
+     @include respond-to(xl) { 
+        color: yellow;
+     }
+
         -webkit-column-count: 1; /* Chrome, Safari, Opera */
         -moz-column-count: 1; /* Firefox */
         column-count: 1;
@@ -42,13 +61,14 @@
   //***************************** parelax *****************************************
 
   .plImg1 {
-    background: url('../../assets/Backgrunds/back01.jpg') no-repeat fixed center center;
+   background: url('../../assets/Backgrunds/back01.jpg') no-repeat fixed center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     color: white;
     padding: 150px 0;
+    display: none;
 }
 
 
@@ -59,7 +79,8 @@
 
 .pBoxWR{
     width: 100%;
-    float:left;    
+    float:left;
+    min-height: 270px;    
     margin: 30px 30px 30px 0 ;
     background-color:white;
     text-align: center;
@@ -80,7 +101,7 @@
 .iBoxWR{
     display: table;
     width: 100%;
-    height: 100%;
+    min-height: 180px;   
     float:left;    
     margin: 30px 30px 30px 0 ;
     background-color:white;
@@ -137,54 +158,16 @@
     @media only screen and (min-width: 768px) {
         .pBoxWR{
             width: calc(50% - 30px);
-            float:left;    
-            margin: 50px 30px 50px 0 ;
-            background-color:white;
-            text-align: center;
-            &:last-of-type{
-                margin-right: 0;
-              
-              }
-              
-            p{
-                font-size: 12px;
-                padding:10px;
-            }   
+            margin: 50px 30px 50px 0 ;          
+         
         }
 
         .iBoxWR{
-            border: solid 1px red;
-            display: table;
-            width: calc(33% - 17px);
-            height: 100%;
-            float:left;    
-            margin: 100px 30px 100px 0 ;
-            background-color:white;
-            text-align: center;
-            &:last-of-type{
-                margin-right: 0;
-              
-              }
-        
-            .iconBox{
-                display: table-cell;    
-                width: 50px;
-                height: 100%;
-                background: linear-gradient($mainBlue, #bac3ca);
-                color:white;
-                font-size: 28px;
-                padding-top: 10px;
-            }
-            .content{
-                padding:10px;
-                text-align: left;
-                display: table-cell;
-                width: calc(100%-50px);
-                background-color: $backGray;
-            }
-            p{
-                font-size: 12px;        
-            }   
+            //border: solid 1px red;
+            width: calc(50% - 32px);
+            margin: 50px 30px 50px 0 ;
+            
+           
         }
 
         .textCol{
@@ -232,40 +215,7 @@
 
     @media only screen and (min-width: 992px) {
 
-        .iBoxWR{
-            border: solid 1px red;
-            display: table;
-            width: calc(33% - 17px);
-            height: 100%;
-            float:left;    
-            margin: 100px 30px 100px 0 ;
-            background-color:white;
-            text-align: center;
-            &:last-of-type{
-                margin-right: 0;
-              
-              }
-        
-            .iconBox{
-                display: table-cell;    
-                width: 50px;
-                height: 100%;
-                background: linear-gradient($mainBlue, #bac3ca);
-                color:white;
-                font-size: 28px;
-                padding-top: 10px;
-            }
-            .content{
-                padding:10px;
-                text-align: left;
-                display: table-cell;
-                width: calc(100%-50px);
-                background-color: $backGray;
-            }
-            p{
-                font-size: 12px;        
-            }   
-        }
+       
 
         #colWR{
             width:75%;
@@ -293,52 +243,19 @@
         --------------------------------------- */
 
 @media only screen and (min-width: 1200px) {
-
+    .plImg1 {
+                display: block;
+    }
     .iBoxWR{
-        border: solid 1px red;
-        display: table;
-        width: calc(33% - 17px);
-        height: 100%;
-        float:left;    
-        margin: 100px 30px 100px 0 ;
-        background-color:white;
-        text-align: center;
-        &:last-of-type{
-            margin-right: 0;
-          
-          }
-    
-        .iconBox{
-            display: table-cell;    
-            width: 50px;
-            height: 100%;
-            background: linear-gradient($mainBlue, #bac3ca);
-            color:white;
-            font-size: 28px;
-            padding-top: 10px;
-        }
-        .content{
-            padding:10px;
-            text-align: left;
-            display: table-cell;
-            width: calc(100%-50px);
-            background-color: $backGray;
-        }
-        p{
-            font-size: 12px;        
-        }   
+        //border: solid 1px blue;        
+        width: calc(33% - 20px);       
+        margin: 100px 30px 100px 0 ;        
     }
 
     .pBoxWR{
-        width: calc(25% - 23px);
-        
-        margin: 100px 30px 100px 0 ;
-        
-        
-        p{
-            font-size: 12px;
-            padding:10px;
-        }   
+        width: calc(25% - 23px);        
+        margin: 100px 30px 100px 0 ;      
+      
     }
 
       #wrSlider{
