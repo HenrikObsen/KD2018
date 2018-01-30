@@ -3,22 +3,13 @@
 @import '../css/iBox.scss';
 
 
-#slider{
-    margin:40px 0 40px 0;
-    width:100%; 
-    min-height: 1px;
-   
-}
 
-#wrSlider{
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-image: url('../../assets/SliderImg/6.jpg');
+
+.bxslider{
+   
     width:100%;
     display: none;
-    height: 300px;    
-
+    
     @include respond-to(small) { 
         display: block; 
         height: 300px;   
