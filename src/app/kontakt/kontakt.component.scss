@@ -1,0 +1,40 @@
+@import '../Schared.scss';
+@import '../css/iBox.scss';
+.iBoxWR{
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+
+
+//***************************** parelax *****************************************
+.plImg1 {
+    @include paralax-box('../../assets/Backgrunds/back03.jpg',110px);
+    display: none;
+
+    @include respond-to(large){       
+            display: block;
+    }
+} 
+
+
+//***************************** Google map *****************************************
+            .google-maps {
+                position: relative;    
+                padding-bottom: 30%;    
+                height: 0;    
+                overflow: hidden;
+            }
+    
+    
+    
+            .google-maps iframe {
+                position: absolute;    
+                top: 0;    
+                left: 0;    
+                width: 100% !important;    
+                height: 100% !important;    
+            }
+            .mapBox{
+    width: 100% !important;
+}

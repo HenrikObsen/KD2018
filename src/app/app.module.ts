@@ -8,6 +8,7 @@ import { HomeComponent } from './home/home.component';
 import { PBoxComponent } from './p-box/p-box.component';
 import { IBoxComponent } from './i-box/i-box.component';
 import { OmOsComponent } from './om-os/om-os.component';
+import { AktiviteterComponent } from './aktiviteter/aktiviteter.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { OmOsComponent } from './om-os/om-os.component';
     HomeComponent,
     PBoxComponent,
     IBoxComponent,
-    OmOsComponent
+    OmOsComponent,
+    AktiviteterComponent
   ],
   imports: [
     BrowserModule,

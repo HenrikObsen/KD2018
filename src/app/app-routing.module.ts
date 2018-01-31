@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { OmOsComponent } from './om-os/om-os.component';
+import { KontaktComponent } from './kontakt/kontakt.component';
+import { AktiviteterComponent } from './aktiviteter/aktiviteter.component';
 
 const routes: Routes = [
  
@@ -9,6 +11,8 @@ const routes: Routes = [
 
   { path: 'home', component: HomeComponent},
   { path: 'omos', component: OmOsComponent},
+  { path: 'kontakt', component: KontaktComponent},
+  { path: 'aktiviteter', component: AktiviteterComponent},
 
  // { path: 'beerlist/:id', component: BeerListComponent},  
 

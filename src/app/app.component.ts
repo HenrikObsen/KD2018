@@ -18,15 +18,22 @@ export class AppComponent {
   }
   
   ngOnInit(){
+    $(".mobileMenuItem, .brand, .brand-text").on({
+      click : function(){
+        $('html,body').animate({ scrollTop: $("body").offset().top }, 'slow');
+        $("#desktopMenu").slideUp();
+      }});
+
     $(".parent").on({
       click : function(){
+        $('html,body').animate({ scrollTop: $("body").offset().top }, 'slow');
         if ($(window).width() < "992")
         {      
           var $thisSubmenu = $(this).find(".submenu");
           var $submenu = $(".submenu");
-        
+   
           if($thisSubmenu.hasClass('open')){
-            $submenu.stop().slideUp();
+            $submenu.stop().slideUp();            
             $submenu.removeClass('open');
           }else{
             $submenu.stop().slideUp();          
@@ -44,7 +51,8 @@ export class AppComponent {
       mouseleave : function(){
         if ($(window).width() > "992") 
         {  
-          $(".submenu").stop().slideUp();      
+          $(".submenu").stop().slideUp();    
+         
         }
       }
     });
@@ -53,11 +61,12 @@ export class AppComponent {
     {
       $("#desktopMenu ul li").on('click',function(){
         $("#desktopMenu").slideUp();
-          
+        $('html,body').animate({ scrollTop: $("body").offset().top }, 'slow');
         });   
         $("#desktopMenu>li").on('click',function (){
             if($(this).hasClass('parent') != true){
               $("#desktopMenu").slideUp();
+              $('html,body').animate({ scrollTop: $("body").offset().top }, 'slow');
             }
         })
     }
@@ -65,7 +74,7 @@ export class AppComponent {
     $("#toggleMenu").click(function(){
       $("#desktopMenu").stop().slideToggle("slow");
       $(".submenu").stop().slideUp();     
-  //    $('html,body').animate({ scrollTop: $("body").offset().top }, 'slow');
+     $('html,body').animate({ scrollTop: $("body").offset().top }, 'slow');
     });
   }
 }

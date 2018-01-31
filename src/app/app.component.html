@@ -7,24 +7,24 @@
         <div class="menu">
             <ul id="desktopMenu">
               <li routerLinkActive="active" class="mobileMenuItem"><a [routerLink]="['/home']">Home</a></li>
-              <li routerLinkActive="active" class="mobileMenuItem parent"><a [routerLink]="['/beerlist', 1]">Klubinfo</a>
-              <ul class="submenu" style="display:none;">
+              <li routerLinkActive="active" class="mobileMenuItem parent"><a routerLink="/omos">Klubinfo</a>
+             <!-- <ul class="submenu" style="display:none;">
                 <li><a routerLink="/omos">Om klubben</a></li>
                 <li><a routerLink="/bestyrelsen">Bestyrelsen</a></li>
                 <li><a [routerLink]="['/omos']">Bliv medlem</a></li>
                 <li><a [routerLink]="['/omos']">Sponsorer</a></li>
                 <li><a href="../assets/vedtaegter.pdf" target="_blank">Vedtægter</a></li>
-              </ul>
+              </ul>-->
               </li>
-              <li routerLinkActive="active" class="mobileMenuItem parent"><a [routerLink]="['/beerlist', 1]">Aktiviteter</a>
-              <ul class="submenu" style="display:none;">
+              <li routerLinkActive="active" class="mobileMenuItem parent"><a routerLink="/aktiviteter">Aktiviteter</a>
+             <!-- <ul class="submenu" style="display:none;">
                   <li>Svømmehal</li>
                   <li>Uddannelse</li>
                   <li>Klubaftner</li>
                   
-                </ul>
+                </ul>-->
               </li>
-              <li routerLinkActive="active" class="mobileMenuItem"><a [routerLink]="['/beerlist', 1]">Kontakt</a></li>
+              <li routerLinkActive="active" class="mobileMenuItem"><a routerLink="/kontakt">Kontakt</a></li>
             </ul>
 
         <div id="toggleMenu" class="fa fa-bars"></div>
