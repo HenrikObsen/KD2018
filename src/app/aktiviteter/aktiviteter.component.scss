@@ -1,6 +1,11 @@
 @import '../Schared.scss';
+@import '../css/iBox.scss';
+@import '../css/font-awesome.min.css';
 
-
+.iBoxWR{
+    margin-top:20px;
+    margin-bottom:20px;
+}
 //***************************** parelax *****************************************
 .plImg1 {
     @include paralax-box('../../assets/Backgrunds/back04.jpg',110px);
@@ -10,3 +15,18 @@
             display: block;
     }
 } 
+
+#image2{
+    display:none;
+    
+    @include respond-to(small) { 
+        display:none;
+    }
+
+    @include respond-to(medium) { 
+        width:25%;
+        float: right;
+        margin:40px 10px 10px 10px;
+        display:block;     
+    }
+}

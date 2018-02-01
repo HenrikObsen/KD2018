@@ -9,6 +9,7 @@ import { PBoxComponent } from './p-box/p-box.component';
 import { IBoxComponent } from './i-box/i-box.component';
 import { OmOsComponent } from './om-os/om-os.component';
 import { AktiviteterComponent } from './aktiviteter/aktiviteter.component';
+import { IndmeldelseComponent } from './indmeldelse/indmeldelse.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AktiviteterComponent } from './aktiviteter/aktiviteter.component';
     PBoxComponent,
     IBoxComponent,
     OmOsComponent,
-    AktiviteterComponent
+    AktiviteterComponent,
+    IndmeldelseComponent
   ],
   imports: [
     BrowserModule,
