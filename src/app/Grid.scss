@@ -1,3 +1,4 @@
+$gridSize: 12;
 $padding-Grid-xs: 8px;
 $padding-Grid-s: 12px;
 $padding-Grid-m: 15px;
@@ -61,36 +62,36 @@ $padding-Grid-l: 20px;
     //----- Columns (Automatic)
 @include respond-to(xsmall) {
 
-    @for $i from 1 through 12 {
+    @for $i from 1 through $gridSize {
         .col-xs-#{$i} {
-            width: (100% / 12) * $i;
+            width: (100% / $gridSize) * $i;
         }
     }
 }
 
 @include respond-to(small) {
 
-    @for $i from 1 through 12 {
+    @for $i from 1 through $gridSize {
         .col-s-#{$i} {
-            width: (100% / 12) * $i;
+            width: (100% / $gridSize) * $i;
         }
     }
 }
 
 @include respond-to(medium) {
 
-    @for $i from 1 through 12 {
+    @for $i from 1 through $gridSize {
         .col-m-#{$i} {
-            width: (100% / 12) * $i;
+            width: (100% / $gridSize) * $i;
         }
     }
 }
 
 @include respond-to(large) {
 
-    @for $i from 1 through 12 {
+    @for $i from 1 through $gridSize {
         .col-l-#{$i} {
-            width: (100% / 12) * $i;
+            width: (100% / $gridSize) * $i;
         }
     }
 }
