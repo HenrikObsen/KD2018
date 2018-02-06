@@ -49,13 +49,7 @@
     }
 }
 
-  .textCol{ 
-    @include text-coll(1,40px); 
-    
-    @include respond-to(small) { 
-        @include text-coll(2,40px); 
-     }
-  }
+
   
   //***************************** parelax *****************************************
   .plImg1 {

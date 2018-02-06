@@ -1,6 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { KontaktComponent } from './kontakt/kontakt.component';
@@ -16,7 +20,7 @@ import { IndmeldelseComponent } from './indmeldelse/indmeldelse.component';
     AppComponent,
     KontaktComponent,
     HomeComponent,
-    PBoxComponent,
+    PBoxComponent,    
     IBoxComponent,
     OmOsComponent,
     AktiviteterComponent,
@@ -24,6 +28,8 @@ import { IndmeldelseComponent } from './indmeldelse/indmeldelse.component';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    HttpModule,
     AppRoutingModule
   ],
   providers: [],

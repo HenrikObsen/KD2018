@@ -1,37 +1,130 @@
 <section class="wrContent wrSpacing">
-    Priser og tilmelding
-    KONTINGENT
-    A-medlemskab: 4 x 350,- kr. (1.400.- årlig) 
-    B-medlemskab: 700,- kr årlig. 
-    Studiemedlemskab: 700,- kr årlig. 
-    Børne/ungdoms medlemskab: der arbejdes pt. på emnet. 
-    
-    Se betingelser for medlemskab her 
-    SVØMMEHALLEN 
-    Sæsonkort: 330,- (Onsdag: 20.00-22.00 lørdag: 17.00-19.00) 
-    
-    Sæsonen starter i sep. Og slutter ved udgangen af april. 
-    LUFTPÅFYLDNING
-    Gratis for medlemmer (Se betingelser for medlemskab i vedtægter her) øvrige 40 - kr. pr/flaske
-    BRUG AF GUMMIBÅD
-    20,- Kr. pr/person, dog min 50,- Kr. + brændstof. 
-    TRYKPRØVNING
-    350,- kr. pr./flaske, plus fragt. 
-    TURE
-    Klubben arrangerer ofte ture af to til fire dages varighed, destinationerne er typisk til Norge eller Tyskland (Kreidesee) Priserne for disse ligger i størrelsesorden 1.500,- til 3.000,- alt inklusiv. Længerevarende ture til varmere himmelstrøg, bookes der ind på eksisterende ture, med mindre klubben selv kan mønstre et vist antal deltagere til en sådan tur, i så fald forhandles der frem til en meget fordelagtig pris med udbyder. 
-    UDSTYRPRISER
-    Grundet det store udbud af forhandlere samt diversiteten af udstyr, må vi her henvise til aktuelle forhandlere og nettet, idet det er umuligt at komme med en præcis sammensætning af noget sådant. Kontakt evt. formanden: formanden@kattegatdykkerne.dk 
-  </section>
+        <h1>Indmeldelse</h1>
+        Hvis du tror at Kattegat Dykkerne kunne være en klub for dig, er du velkommen til at se forbi klubben en tirsdag til klubaften eller tilmelde dig online her under. 
+        Hvis du skulle have nogle spørgsmål kan du kontakte os via mail eller telefon, som du finder på siden <a routerLink="/kontakt">kontakt</a>.
+</section>
   <div class="plImg1"></div>
   
   <div class="wrGray">
       <div class="wrContent per">
+            <form class="form" (ngSubmit)="onSubmit()" #f="ngForm">
+                   
 
-      <h2>Tilmelding</h2>
-      Hvis du tror at Kattegat Dykkerne kunne være en klub for dig. Er du velkommen til at se forbi klubben en tirsdag til klubaften eller tilmelde dig online via linket her under. Hvis du skulle have nogle spærgsmål kan du kontae os via mail eller telefon, de boksen Kontakt.
-      <br>FORM HER!!!!!!
+
+                    <div class="row">    
+                            <div class="content"> 
+                                <div class="col-l-4 col-m-4 col-s-12 col-xs-12"> 
+                                        <table>
+                                        <tr>                  
+                                                <td><label for="Type">Medlemstype:</label></td>                  
+                                                <td colspan="2">
+                                                <select id="Type" [(ngModel)]="Type" name="Type">
+                                                        <option selected="selected" value="800">Bassis medlem</option>
+                                                        <option value="400">Studie medlem</option>
+                                                        <option value="400">Uv-jæger</option>
+                                                        <option value="350">Junior</option>
+                                                        <option value="110">Børne/Unge</option>
+                                                </select>                                
+                                                </td>                  
+                                        </tr>     
+                                                     
+                                          <tr>                  
+                                            <td><label for="Svommehal">Svømmehal:</label></td>                  
+                                            <td><input type="checkbox" id="Svommehal" [(ngModel)]="Svommehal" name="Svommehal" value="300" /></td><td> +300,- kr årligt.</td>                  
+                                          </tr>
+                                          <tr>                  
+                                            <td><label for="Sortering">DSF-medlemskab:</label></td>                  
+                                            <td><input type="checkbox" id="DSF" [(ngModel)]="DSF" name="DSF" value="300"></td><td> +300,- kr årligt.</td>                  
+                                          </tr>  
+                                          <tr>                  
+                                                <td><label for="Sortering">Luftpåfyldning:</label></td>                  
+                                                <td><input type="checkbox" id="Luft" [(ngModel)]="Luft" name="Luft" value="400"></td><td> +400,- kr årligt.</td>                  
+                                        </tr>
+                                        <tr>
+                                                        <td colspan="3">&nbsp;</td>
+                                        </tr>  
+                                        <tr>
+                                                        <td colspan="3"><span class="msg">Dit medlemskab: {{ result }} kr. pr. år.</span></td>
+                                        </tr>                    
+                                        </table>                                           
+                                    
+                                        
+                                </div>    
+                                <div class="col-l-4 col-m-4 col-s-12 col-xs-12"> 
+                                        <label for="Fodselsdag">Fødselsdag & år:</label>
+                                        <input id="Fodselsdag" [(ngModel)]="Fodselsdag" name="Fodselsdag" type="text">                                                        
+                                                                        
+                                        <label for="Navn">Navn:</label>
+                                        <input id="Navn" [(ngModel)]="Navn" name="Navn" type="text">
+                                                               
+                                        <label for="Adresse">Adresse:</label>
+                                        <input id="Adresse" [(ngModel)]="Adresse" name="Adresse" type="text">
+                                                       
+                                        <label for="Postnr">Postnr:</label>
+                                        <input id="Postnr" [(ngModel)]="Postnr" name="Postnr" type="text">
+                                                        
+                                        
+                                                                        
+
+                                </div>                                                        
+                                <div class="col-l-4 col-m-4 col-s-12 col-xs-12">
+                                        <label for="Bynavn">Bynavn:</label>
+                                        <input id="Bynavn" [(ngModel)]="Bynavn" name="Bynavn" type="text">
+
+                                        <label for="Tlf">Tlf:</label>
+                                        <input id="Tlf" [(ngModel)]="Tlf" name="Tlf" type="text">
+                                                        
+                                        <label for="Email">E-mail:</label>
+                                        <input id="Email" [(ngModel)]="Email" name="Email" type="text">   
+                                        <br/>
+                                        <br/>
+                                        <button type="submit" class="button">Send tilmelding</button>
+                                 </div>    
+                                          
+                            </div>    
+                    </div>
+           </form>
       </div>
-
-    </div>
+</div>
 
     <div class="plImg1"></div>
+
+    <section class="wrContent">
+        <div class="textCol spacingTB">         
+                <h2>Kontingent</h2><p>            
+                Bassis medlem: 800.- kr årlig <br/>
+                Studie medlem: 400,- kr årlig. <br/>
+                Uv-jæger : 400,- kr årlig. <br/>
+                Junior: 350,- kr årlig. <br/>
+                Børne/ungdoms 0-10 år 110,- kr årlig.  
+                </p>
+                
+                <h2>Svømmehallen</h2><p>
+                Sæsonkort: 400,- (Onsdag: 20.00-22.00 fredag: 20.00-22.00)<br/>         
+                Sæsonen starter i sep. Og slutter ved udgangen af april.<br/> 
+                </p>
+
+                <h2>DSF</h2><p>
+                300,- kr årligt.
+                </p>
+
+                <h2>Luftpåfyldning</h2><p>
+                400,- kr årlig (Se betingelser for medlemskab i vedtægter her) øvrige 40 - kr. pr/flaske
+                </p>
+
+                <h2>Brug af gummibåd</h2><p>
+                20,- Kr. pr/person, dog min 50,- Kr. + brændstof. 
+                </p>
+
+                <h2>Trykprøvning</h2><p>
+                350,- kr. pr./flaske, plus fragt. 
+                </p>
+                
+                <h2>Ture</h2><p>
+                        Klubben arrangerer ofte ture af to til fire dages varighed, destinationerne er typisk til Norge eller Tyskland (Kreidesee) Priserne for disse ligger i størrelsesorden 1.500,- til 3.000,- alt inklusiv. <br/><br/>
+                        Længerevarende ture til varmere himmelstrøg, bookes der ind på eksisterende ture, med mindre klubben selv kan mønstre et vist antal deltagere til en sådan tur, i så fald forhandles der frem til en meget fordelagtig pris med udbyder. 
+                </p>
+                <p>Aller priser forudsætter at du er medlem af klubben. For mere info se klubbens vedtægter:  <a href="../assets/vedtaegter.pdf" target="_blank">Hent vedtægterne som PDF</a> </p>
+               
+        </div>
+    </section>

@@ -16,6 +16,8 @@ $headerColor: #61778c;
         color: $headerColor;
         font-size: 18px;
     }
+
+ 
     @mixin col-wr($float, $mSize) {
         width:100%;
         float: $float;
@@ -80,6 +82,14 @@ $headerColor: #61778c;
         -moz-column-gap: $gap; /* Firefox */
         column-gap: $gap;
     }
+   
+    .textCol{ 
+        @include text-coll(1,40px); 
+        
+        @include respond-to(small) { 
+            @include text-coll(2,40px); 
+         }
+      }
 
       //***************************** parelax *****************************************
 
@@ -92,3 +102,5 @@ $headerColor: #61778c;
         color: white;
         padding: $size 0;        
     }
+
+
