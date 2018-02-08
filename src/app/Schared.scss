@@ -36,8 +36,9 @@ $headerColor: #61778c;
     .wrContent {
         margin-left:auto;
         margin-right:auto;
-        width:92%;
+        width: calc(92% - 30px);
         position: relative;
+        
 
         &:after,&:before {
             content: " ";
@@ -46,19 +47,22 @@ $headerColor: #61778c;
         }  
 
         @include respond-to(small) { 
-            width: 770px;
+            width: 730px;
          }
     
          @include respond-to(medium) { 
-            width: 970px;
+            width: 960px;
+            
          }
     
          @include respond-to(large) { 
             width: 1100px;
+           
          }
     
          @include respond-to(xl) { 
             width: 1100px;
+           
          }
     }
     .wrSpacing{

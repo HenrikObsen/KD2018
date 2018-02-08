@@ -1,4 +1,12 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, Injectable } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { Mail } from '../models/Mail';
+import { Http, Response } from '@angular/http';
+import { Headers, RequestOptions } from '@angular/http';
+import { Observable } from 'rxjs';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/toPromise';
+
 
 @Component({
   selector: 'app-kontakt',
@@ -7,6 +15,68 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class KontaktComponent implements OnInit {
+
+  bmData = [
+    {
+      titel: "Formand",
+      navn: "Kristoffer Sørensen",
+      adresse: "Skakkesholm 20",
+      postnrBy: "8500 Grenaa",
+      tlf:"Tlf: 21 70 25 40",
+      email:"formanden@kattegatdykkerne.dk",
+      image: "kristoffer.jpg" 
+    },
+    {
+      titel: "Næstformand",
+      navn: "Ole Riis",
+      adresse: "Krattet 324",
+      postnrBy: "8500 Grenaa",
+      tlf:"Tlf: 29 63 38 77",
+      email:"olr@terma.com",
+      image: "Ole-Riis.jpg" 
+    },{
+      titel: "Sekretær",
+      navn: "Jens Reinholt",
+      adresse: "Nørrevangs Alle 10",
+      postnrBy: "8410 Rønde",
+      tlf:"",
+      email:"",
+      image: "paavej.png" 
+    },{
+      titel: "Kasserer",
+      navn: "Kristoffer Sørensen",
+      adresse: "",
+      postnrBy: "",
+      tlf:"",
+      email:"",
+      image: "paavej.png" 
+    },{
+      titel: "Bestyrelsesmedlem 1",
+      navn: "Henrik Obsen",
+      adresse: "Svinget 2",
+      postnrBy: "8570 Trustrup",
+      tlf:"Tlf: 42 78 96 05",
+      email:"hto@djes.dk",
+      image: "paavej.png" 
+    },{
+      titel: "Suppleant 1",
+      navn: "Maxime Combastel",
+      adresse: "",
+      postnrBy: "",
+      tlf:"",
+      email:"",
+      image: "paavej.png" 
+    },{
+      titel: "Suppleant 2",
+      navn: "Daniel Meyer",
+      adresse: "",
+      postnrBy: "",
+      tlf:"",
+      email:"",
+      image: "paavej.png" 
+    }
+  ]; 
+
   i1Data = [
     {
       icon: "fa-address-book",
@@ -29,7 +99,52 @@ export class KontaktComponent implements OnInit {
       adresse: "Skakkesholm 20",
       bynavn: "Grenaa"     
     }; 
-  constructor() { }
+
+    
+    databasen = 'http://kd.henrikobsen.dk/api/Data/SendMail/';  
+     data;  
+    Name='';  
+    Sortering=''; 
+    submitted = false;  
+    extractData: number;  
+    handleErrorObservable;  
+    
+    Navn;
+    Email;
+    Emne;  
+    Tekst;
+  
+  
+    onSubmit() {      
+      let mail = new Mail(
+        this.Email,
+        this.Navn,
+        this.Emne,
+        this.Tekst,        
+      );
+      //console.log(mail);
+     this.addCat(mail);  
+    }
+  
+    constructor(private http:Http) { }   
+  
+    addCat(mail :Mail) {  
+      //let headers = new Headers({ 'Content-Type': 'application/json' });    
+      //let options = new RequestOptions({ headers: headers });
+     //this.http.post(this.databasen, cat, options)  
+      //.subscribe();
+  
+      let headers = new Headers({ 'Authorization': 'TokenValue' });  
+      let options = new RequestOptions({ headers: headers });  
+  
+  
+      this.http.post(this.databasen, mail, options)  
+      .subscribe( data => console.log(data["_body"]),  
+        error => {  
+          console.log(JSON.stringify(error.json()));  
+      });  
+    
+    }
 
   ngOnInit() {
   }

@@ -13,7 +13,7 @@
 
   #image1{
     display:none;
- 
+    margin:20px 10px 10px 0px;
     @include respond-to(small) { 
         display:none;
     }
@@ -21,7 +21,7 @@
     @include respond-to(medium) { 
         width:30%;
         float: left;
-        margin:10px 10px 10px 10px;
+        margin:20px 10px 10px 0px;
         display:block;     
     }
 }

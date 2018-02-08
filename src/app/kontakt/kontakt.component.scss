@@ -1,5 +1,6 @@
 @import '../Schared.scss';
 @import '../css/iBox.scss';
+@import '../css/bMember.scss';
 .iBoxWR{
     margin-top:20px;
     margin-bottom:20px;
@@ -19,6 +20,10 @@
 
 
 //***************************** Google map *****************************************
+
+.wrMap{
+    margin-top:40px;
+}
             .google-maps {
                 position: relative;    
                 padding-bottom: 30%;    

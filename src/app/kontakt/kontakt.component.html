@@ -8,39 +8,11 @@
 
   <div class="wrGray">
     <div class="wrContent per">
-      
-        <h1>Bestyrelsen</h1><table style="MARGIN-LEFT: auto; WIDTH: 450px; MARGIN-RIGHT: auto" cellpadding="10">
-            <tbody>
-            <tr>
-            <td width="170" valign="top"><img width="150" src="Images/kristoffer.jpg"></td>
-            <td valign="top">
-            <h2>Formand:</h2><b>Kristoffer Sørensen</b><br>Skakkesholm 20<br>8500 Grenaa. <br>Tlf: 21702540<br><a href="mailto:formanden@kattegatdykkerne.dk">formanden@kattegatdykkerne.dk</a> </td></tr>
-            <tr>
-            <td width="170" valign="top"><img width="150" src="Bestyrelsen/Ole-Riis.jpg"></td>
-            <td valign="top">
-            <h2>Næstformand:</h2><b>Ole Riis</b> <br>Krattet 324 <br>8500 Grenaa <br>Tlf: 86 30 02 37 <br>Mobil: 29 63 38 77 <br><a href="mailto:olr@terma.com">olr@terma.com</a> </td></tr>
-            <tr>
-            <td width="170" valign="top"><img width="150" src="Bestyrelsen/påvej.jpg"></td>
-            <td valign="top">
-            <h2>Sekretær:</h2><strong>Jens Reinholt</strong>&nbsp;<br>Søgade 10 <br>8500 Grenaa<br>Mobil: 22492964<br><a href="mailto:louise.eriksen@gmail.com">louise.eriksen@gmail.com</a>&nbsp; </td></tr>
-            <tr>
-            <td width="170" valign="top"><img width="150" src="bestyrelsen/paavej.jpg"></td>
-            <td valign="top">
-            <h2>Kasserer:</h2><strong>Kristoffer Sørensen</strong></td></tr>
-            <tr>
-            <td width="170" valign="top"><img width="150" src="bestyrelsen/henrikobsen.jpg"></td>
-            <td valign="top">
-            <h2>Bestyrelsesmedlem 1:</h2><strong>Henrik Obsen<br></strong>Svinget 2<br>8570 Trustrup<br>Mobil: 42789605<br><a href="mailto:hto@djes.dk">hto@djes.dk</a>&nbsp;</td></tr>
-            <tr>
-            <td width="170" valign="top"><img width="150" src="bestyrelsen/påvej.jpg"></td>
-            <td valign="top">
-            <h2>Suppleant 1:</h2><strong>Maxime Combastel</strong><br>&nbsp;</td></tr>
-            <tr>
-            <td width="170" valign="top"><img width="150" src="Images/påvej.jpg"></td>
-            <td valign="top">
-            <h2>Suppleant 2:</h2><b>Daniel Meyer</b><br>&nbsp;</td></tr>
-            </tbody><tbody></tbody></table><br>
-            
+        <div class="row">  
+            <div class="content"> 
+              <app-b-member class="col-l-3 col-m-3 col-s-6 col-xs-6" *ngFor="let bMember of bmData" [member]="bMember"></app-b-member>
+          </div>  
+  </div>  
     </div>
   </div>
   
@@ -54,19 +26,17 @@
                      
                       <div class="col-l-6 col-m-6 col-s-12 col-xs-12"> 
                               <label for="Navn">Navn:</label>
-                              <input id="Navn" [(ngModel)]="Navn" name="Navn" type="text">                                                        
+                              <input id="Navn" [(ngModel)]="Navn" name="Navn" type="text" required>                                                        
                                                               
                               <label for="Email">E-mail:</label>
-                              <input id="Email" [(ngModel)]="Email" name="Email" type="text">   
+                              <input id="Email" [(ngModel)]="Email" name="Email" type="text" required>   
                                                      
                               <label for="Emne">Emne:</label>
-                              <input id="Emne" [(ngModel)]="Emne" name="Emne" type="text">
-                                             
+                              <input id="Emne" [(ngModel)]="Emne" name="Emne" type="text">                                            
                                                                          
                       </div>                                                        
                       <div class="col-l-6 col-m-6 col-s-12 col-xs-12">
-                              <textarea id="Tekst" [(ngModel)]="Tekst" name="Tekst"></textarea>
-                                              
+                              <textarea id="Tekst" [(ngModel)]="Tekst" name="Tekst" required></textarea>                                             
                               
                               <br/>
                               <br/>
@@ -80,7 +50,7 @@
 
   <div class="plImg1"></div>
 
-<section class="wrContent mapBox wrSpacing">
+<section class="wrContent mapBox wrMap">
  <div class="google-maps">       
       <iframe src="https://www.google.com/maps/embed/v1/place?q=skakkesholm 20,+Grenaa,+Danmark&key=AIzaSyB85S0mo9-AHfVm3-KhI_sVbwN_BdELGU4" width="600" height="450" frameborder="0" style="border: 0"></iframe>
 </div>   

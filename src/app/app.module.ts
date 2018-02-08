@@ -14,6 +14,7 @@ import { IBoxComponent } from './i-box/i-box.component';
 import { OmOsComponent } from './om-os/om-os.component';
 import { AktiviteterComponent } from './aktiviteter/aktiviteter.component';
 import { IndmeldelseComponent } from './indmeldelse/indmeldelse.component';
+import { BMemberComponent } from './b-member/b-member.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { IndmeldelseComponent } from './indmeldelse/indmeldelse.component';
     IBoxComponent,
     OmOsComponent,
     AktiviteterComponent,
-    IndmeldelseComponent
+    IndmeldelseComponent,
+    BMemberComponent
   ],
   imports: [
     BrowserModule,

@@ -1,6 +1,8 @@
 
 export class Indm {
 
+
+
       constructor(
           Fodselsdag: string,
           Type: number, 
