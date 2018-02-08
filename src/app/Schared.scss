@@ -1,12 +1,19 @@
 @import 'Respond.scss';
 @import 'Grid.scss';
 $mainBlue: #69809c; 
+$lightBlue: #78879a; 
 $backGray: #ebeced;
 $headerColor: #61778c;
 
     img{
         width:100%;
     }
+
+    .error{
+        color:red;
+    }
+
+  
 
     h1 {
         color:$headerColor;

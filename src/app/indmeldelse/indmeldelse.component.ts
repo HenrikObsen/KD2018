@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewEncapsulation, Injectable, ViewChild  } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Indm } from '../models/Indm';
+import { Mail } from '../models/mail';
 import { Http, Response } from '@angular/http';
 import { Headers, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs';
@@ -17,55 +18,67 @@ import 'rxjs/add/operator/toPromise';
 @Injectable()
 export class IndmeldelseComponent implements OnInit {
  @ViewChild("f") test: NgForm;
-  databasen = 'http://api.kattegatdykkerne.dk/api/Category/AddCat/'; 
+ databasen = 'http://api.kattegatdykkerne.dk/api/Data/SendMail/'; 
+
+  extractData: any;
+  result: number = 0;
  
   Fodselsdag: string;
   Type: number = 800;
   DSF = false;
   Luft = false;
   Svommehal = false;
-  extractData: any;
-  result: number = 0;
+  Navn: string;
+  Adresse: string;
+  Postnr: string;
+  Bynavn:string;
+  Tlf:string;
+  Email: string;
   
   
-  onSubmit() {    
-
-    let Indmeldelse = new Indm(
-      this.Fodselsdag,
-      this.Type,
-      this.Luft,
-      this.DSF,
-      this.Svommehal
-    );
+  onSubmit() {     
     
-    this.add(Indmeldelse);
+    this.sendMail();
 
-  }
-  
+  }  
 
   constructor(private http:Http) {
   
-   }
+  }
 
 
 
-  add(Indmeldelse) {
+sendMail() {
+let body = "<h2>INDMELDELSE</h2>" + "<b>" + this.Navn + "</b><br/>" +
+this.Fodselsdag + "<br/>" +
+this.Adresse + "<br/>" +
+this.Postnr + " " +this.Bynavn + "<br/>" +
+this.Tlf + "<br/>" +
+this.Email + "<br/><br/><hr/>" +
+"Medlemstype: " + this.Type + "<br/>" +
+"DSF: " + this.DSF + "<br/>" +
+"Luft: " + this.Luft + "<br/>" +
+"Svømmehal: " + this.Svommehal + "<br/>";
 
-   
-    //let headers = new Headers({ 'Content-Type': 'application/json' });   
-    //let options = new RequestOptions({ headers: headers });
-   //this.http.post(this.databasen, cat, options)
-    //.subscribe();
 
-  /*  let headers = new Headers({ 'Authorization': 'TokenValue' });
-    let options = new RequestOptions({ headers: headers });
+    let mail = new Mail(
+      this.Email,
+      this.Navn,
+      "KattegatDykkerne.dk",
+      body,        
+    );
+    document.getElementById("myForm").className = "fadeOut";
+    document.getElementById("sendMSG").className = "fadeIn";
 
-    this.http.post(this.databasen, Indmeldelse, options)
-    .subscribe( data => this.extractData = data["_body"],
-      error => {
-        console.log(JSON.stringify(error.json()));
-    });
-*/
+    let headers = new Headers({ 'Authorization': 'TokenValue' });  
+      let options = new RequestOptions({ headers: headers });  
+  
+  
+      this.http.post(this.databasen, mail, options)  
+      .subscribe( data => console.log(data["_body"]),  
+        error => {  
+          console.log(JSON.stringify(error.json()));  
+      }); 
     }
   
 

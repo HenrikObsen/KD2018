@@ -58,6 +58,17 @@ table{
         width: 100%;
         font-weight: bold;
         outline:none; 
+
+        &:hover {background-color:$lightBlue}
+
+        &:active {
+            background-color: $lightBlue;
+            box-shadow: 0 2px lightgray;
+            transform: translateY(2px);
+        }   
+        &:disabled {
+            background-color:lighten($lightBlue, 10%);
+        } 
     }
 
     input[type=text]{
@@ -68,6 +79,20 @@ table{
         border:solid lightgray 1px;
         padding: 0px 10px 0px 10px;
         margin: 5px 0 10px 0;
+
+        &.ng-invalid{
+            border: solid red 1px;
+        }
+        &.ng-touched{
+            border: solid red 1px;
+        }
+        
+        &.ng-valid{
+            border: solid lightgray 1px;
+        }
+        &.ng-untouched{
+            border: solid lightgray 1px;
+        }
     }
 
     input[type=checkbox]{
@@ -93,4 +118,38 @@ table{
     }
   
 
+}
+#sendMSG{
+    width:100%;
+    text-align: center;
+    margin: 0 auto 0 auto;
+    font-size: 30px;
+    font-weight: bold;
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 1s linear;
+    
+    i{
+        font-size: 100px;
+        color:rgb(23, 177, 23);
+        font-weight: none;
+    }
+
+    &.fadeIn {
+        display: block;
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+
+#myForm{
+    transition: opacity 1s linear;
+    display: block;
+
+    &.fadeOut {
+        display: none;
+        opacity: 0;
+    }
 }

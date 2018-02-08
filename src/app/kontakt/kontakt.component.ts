@@ -6,6 +6,9 @@ import { Headers, RequestOptions } from '@angular/http';
 import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
+declare var jquery:any;
+declare var $ :any;
+
 
 
 @Component({
@@ -101,7 +104,7 @@ export class KontaktComponent implements OnInit {
     }; 
 
     
-    databasen = 'http://kd.henrikobsen.dk/api/Data/SendMail/';  
+    databasen = 'http://api.kattegatdykkerne.dk/api/Data/SendMail/';  
      data;  
     Name='';  
     Sortering=''; 
@@ -123,17 +126,27 @@ export class KontaktComponent implements OnInit {
         this.Tekst,        
       );
       //console.log(mail);
-     this.addCat(mail);  
+     this.sendMail(mail);  
     }
   
     constructor(private http:Http) { }   
   
-    addCat(mail :Mail) {  
+    sendMail(mail :Mail) {  
       //let headers = new Headers({ 'Content-Type': 'application/json' });    
       //let options = new RequestOptions({ headers: headers });
      //this.http.post(this.databasen, cat, options)  
       //.subscribe();
-  
+      
+      //document.getElementById("sendMSG").style.display = "block";
+      document.getElementById("myForm").className = "fadeOut";
+      document.getElementById("sendMSG").className = "fadeIn";
+    
+      //document.getElementById("sendMSG").classList.add('fadeIn');
+
+      //document.getElementById("MyElement").classList.remove('MyClass');
+  //document.getElementById("sendMSG").style.display = "block";
+  //document.getElementById("myForm").style.display = "none";
+
       let headers = new Headers({ 'Authorization': 'TokenValue' });  
       let options = new RequestOptions({ headers: headers });  
   

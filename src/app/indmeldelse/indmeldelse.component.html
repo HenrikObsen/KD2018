@@ -7,9 +7,7 @@
   
   <div class="wrGray">
       <div class="wrContent per">
-            <form class="form" (ngSubmit)="onSubmit()" #f="ngForm">
-                   
-
+            <form id="myForm" class="form" (ngSubmit)="onSubmit()" #f="ngForm">                 
 
                     <div class="row">    
                             <div class="content"> 
@@ -62,9 +60,6 @@
                                                        
                                         <label for="Postnr">Postnr:</label>
                                         <input id="Postnr" [(ngModel)]="Postnr" name="Postnr" type="text" required>
-                                                        
-                                        
-                                                                        
 
                                 </div>                                                        
                                 <div class="col-l-4 col-m-4 col-s-12 col-xs-12">
@@ -78,12 +73,13 @@
                                         <input id="Email" [(ngModel)]="Email" name="Email" type="text" required>   
                                         <br/>
                                         <br/>
-                                        <button type="submit" class="button">Send tilmelding</button>
+                                        <button type="submit" class="button" [disabled]="!f.valid">Send tilmelding</button>
                                  </div>    
                                           
                             </div>    
                     </div>
            </form>
+           <div id="sendMSG">Din indmeldelse er nu sendt!!! <br/><i class="fa fa-check"></i></div>
       </div>
 </div>
 

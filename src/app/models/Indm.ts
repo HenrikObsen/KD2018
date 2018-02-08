@@ -9,7 +9,13 @@ export class Indm {
           Luft: boolean, 
           DSF: boolean, 
           Svommehal: boolean,
-         
+          Navn: string,
+          Adresse: string,
+          Postnr: string,
+          Bynavn:string,
+          Tlf:string,
+          Email: string,
+
         ) { 
 
     }
