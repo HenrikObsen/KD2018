@@ -30,7 +30,7 @@ export class HomeComponent implements OnInit {
     },  {
       image: "uv-jagt.jpg",
       headline: "UV-jagt",
-      content: "Vi har også en del fridykkere og uv-jægere i klubben der jævntlig deltager i forskellige konkurencer."
+      content: "Vi har også en del fridykkere og uv-jægere i klubben der jævntlig deltager i forskellige konkurrencer."
     },
   ]; 
 
@@ -38,16 +38,16 @@ export class HomeComponent implements OnInit {
     {
       image: "Uddannelse1.jpg",
       headline: "Uddannelse",
-      content: "Klubben har tilknytter instruktøre og vi uddanner dykkere inden for Padi og TDI"
+      content: "Klubben har tilknytter instruktører og vi uddanner dykkerer inden for Padi og TDI"
     },
     {
       image: "rejser.jpg",
       headline: "Udenlandsture",
-      content: "Vi afholder eller deltager årligt i udenlands ture blandt andet til Norge"
+      content: "Vi afholder eller deltager årligt i udenlandsture blandt andet til Norge"
     },  {
       image: "Foto.jpg",
       headline: "Foto",
-      content: "I klubbens medlemmer deltager jævnligt i foto konkurencer og arangamanger"
+      content: "I klubbens medlemmer deltager jævnligt i fotokonkurrencer og arrangementer"
     },  {
       image: "Svommehal.jpg",
       headline: "Svømmehal",
@@ -59,12 +59,12 @@ export class HomeComponent implements OnInit {
     {
       icon: "fa-star",
       headline: "Tilmelding",
-      content: "Hvis du tror at Kattegat Dykkerne kunne være en klub for dig. Er du velkommen til at se forbi klubben en tirsdag til klubaften eller tilmelde dig online via linket her under. Hvis du skulle have nogle spærgsmål kan du kontae os via mail eller telefon, de boksen Kontakt.<br/><br/><a>Tilmelding klik her</a>"
+      content: "Hvis du tror at Kattegat Dykkerne kunne være en klub for dig, er du velkommen til at se forbi klubben en tirsdag til klubaften eller tilmelde dig online via linket her under. Hvis du skulle have nogle spørgsmål, kan du kontakte os via mail eller telefon,kontakt info finder du i boksen Kontakt.<br/><br/><a>Tilmelding klik her</a>"
     },
     {
       icon: "fa-facebook",
       headline: "Facebook",
-      content: "Det meste af vores komunikation forgår via vores to facebook grupper. Den ene grupper er for alle og er typisk der vi skly aktiviteter op. Den anden er lukket og kun til intern brug for klubbens medlemmer. <br><br>du finder vores facebook gruppe ved at klikke <a href='https://www.facebook.com/groups/kattegatdykkerne/' target='_blank'>her</a>"
+      content: "Det meste af vores kommunikation foregår via vores to facebook grupper. Den ene grupper er for alle, og er typisk der vi slår aktiviteter op. Den anden er lukket og kun til intern brug for klubbens medlemmer. <br><br>du finder vores facebook gruppe ved at klikke <a href='https://www.facebook.com/groups/kattegatdykkerne/' target='_blank'>her</a>"
     }, {
       icon: "fa-address-book",
       headline: "Kontakt",

@@ -60,7 +60,7 @@ export class KontaktComponent implements OnInit {
       postnrBy: "8570 Trustrup",
       tlf:"Tlf: 42 78 96 05",
       email:"hto@djes.dk",
-      image: "paavej.png" 
+      image: "henrikobsen.jpg" 
     },{
       titel: "Suppleant 1",
       navn: "Maxime Combastel",
@@ -89,7 +89,7 @@ export class KontaktComponent implements OnInit {
     {
       icon: "fa-facebook",
       headline: "Facebook",
-      content: "Det meste af vores komunikation forgår via vores to facebook grupper. Den ene grupper er for alle og er typisk der vi skly aktiviteter op. Den anden er lukket og kun til intern brug for klubbens medlemmer. <br><br>du finder vores facebook gruppe ved at klikke <a href='https://www.facebook.com/groups/kattegatdykkerne/' target='_blank'>her</a>"
+      content: "Det meste af vores kommunikation foregår via vores to facebook grupper. Den ene grupper er for alle, og er typisk der vi slår aktiviteter op. Den anden er lukket og kun til intern brug for klubbens medlemmer. <br><br>du finder vores facebook gruppe ved at klikke <a href='https://www.facebook.com/groups/kattegatdykkerne/' target='_blank'>her</a>"
     }, 
      {
       icon: "fa-star",

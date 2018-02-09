@@ -20,7 +20,7 @@ export class AktiviteterComponent implements OnInit {
     }, {
       icon: "fa-users",
       headline: "Holdstart",
-      content: "Vores fasste hold i 2017 starter: <br/><br/>- Open Water Diver: 19. august. <br/>- Advanced Open Water: 20. Juni. <br/>- Rescue Diver: september 2017. <br/>- Basic Nitrox: 2. september. <br/><br/>Vi starter løbende kurser når der er hold til det så der kan være mulighed for andre tidspunkter end overstående.Du kan se mere om kurserne på aktivitetssiden her her.<br><br> Tilmelding skal ske senest 14 dage før opstart. Mere info eller tilmelding kan ske på hto@djes.dk eller 42789605<br/><br/>"
+      content: "Vores faste hold i 2017 starter: <br/><br/>- Open Water Diver: 19. august. <br/>- Advanced Open Water: 20. Juni. <br/>- Rescue Diver: september 2017. <br/>- Basic Nitrox: 2. september. <br/><br/>Vi starter løbende kurser når der er hold til det så der kan være mulighed for andre tidspunkter end overstående.Du kan se mere om kurserne på aktivitetssiden her her.<br><br> Tilmelding skal ske senest 14 dage før opstart. Mere info eller tilmelding kan ske på hto@djes.dk eller 42789605<br/><br/>"
     }
   ]; 
   constructor() { }

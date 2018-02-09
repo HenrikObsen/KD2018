@@ -96,6 +96,10 @@ $headerColor: #61778c;
    
     .textCol{ 
         @include text-coll(1,40px); 
+
+        h2{
+            margin-top: 0;
+        }
         
         @include respond-to(small) { 
             @include text-coll(2,40px); 
