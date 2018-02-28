@@ -1,12 +1,12 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, HostListener } from '@angular/core';
 import '../js/jquery.bxslider.js';
-declare var jquery:any;
-declare var $ :any;
+declare var jquery: any;
+declare var $: any;
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss','../css/font-awesome.min.css', '../css/jquery.bxslider.css'],
+  styleUrls: ['./home.component.scss', '../css/font-awesome.min.css', '../css/jquery.bxslider.css'],
   encapsulation: ViewEncapsulation.None
 })
 
@@ -23,16 +23,16 @@ export class HomeComponent implements OnInit {
       image: "Stranddyk.jpg",
       headline: "Stranddyk",
       content: "I sommerperioden er der ugentlige stranddyk ved de omkringliggende kyster. Til dette bor vi jo perfekt"
-    },  {
+    }, {
       image: "Baadtur.jpg",
       headline: "Bådture",
       content: "Klubben råder over en lille rib-båd og flere af klubbens medlemmer afholder ture i deres private både."
-    },  {
+    }, {
       image: "uv-jagt.jpg",
       headline: "UV-jagt",
       content: "Vi har også en del fridykkere og uv-jægere i klubben der jævntlig deltager i forskellige konkurrencer."
     },
-  ]; 
+  ];
 
   p2Data = [
     {
@@ -44,17 +44,17 @@ export class HomeComponent implements OnInit {
       image: "rejser.jpg",
       headline: "Udenlandsture",
       content: "Vi afholder eller deltager årligt i udenlandsture blandt andet til Norge"
-    },  {
+    }, {
       image: "Foto.jpg",
       headline: "Foto",
       content: "I klubbens medlemmer deltager jævnligt i fotokonkurrencer og arrangementer"
-    },  {
+    }, {
       image: "Svommehal.jpg",
       headline: "Svømmehal",
       content: "Klubben har på bestemte tidspunkter fået tildelt haltider i Grenaa Idræts Centers svømmehal."
     },
-  ]; 
-  
+  ];
+
   i1Data = [
     {
       icon: "fa-star",
@@ -70,21 +70,44 @@ export class HomeComponent implements OnInit {
       headline: "Kontakt",
       content: "Kattagat Dykkerne Grenaa<br>att: Kristoffer Sørensen<br> Skakkesholm 20<br>DK-8500 Grenaa<br><br>formanden@kattagatdykkerne.dk<br>Tlf: 21702540"
     }
-  ]; 
+  ];
 
 
-   constructor(){
-     
-   }       
-
-   ngOnInit(){
+  constructor() {
    
-      $('.bxslider').bxSlider({
-        auto: true,
-        mode: 'fade',
+
+  }
+  //public innerWidth: any;
+  //public show: boolean = true; 
+
+  ngOnInit() {    
+    
+    $('.bxslider').bxSlider({
+      auto: true,
+      mode: 'fade',
       }
     );
+  }
 
-   }
+  // @HostListener('window:resize', ['$event'])
+  // onResize(event) {
+  //   this.innerWidth = window.innerWidth;
+
+  //   if(this.innerWidth < "1000"){
+  //     this.show = false;
+  //   }
+  //   else
+  //   {
+  //     this.show = true;
+
+  //     $('.bxslider').bxSlider({
+  //       auto: true,
+  //       mode: 'fade',
+  //     }
+  //     );
+  //   }
+    
+  // }
+  
 
 }
